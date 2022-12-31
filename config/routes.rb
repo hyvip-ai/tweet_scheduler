@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get "/", to:"main#index", as:"home"
 
   get "about", to:"about#index", as:"about"
+
+  get "/password", to:"password#index", as:"password"
+  patch "/password", to:"password#edit"
   
   get "/register", to:"register#index", as:"register"
   post "/register", to:"register#create"
